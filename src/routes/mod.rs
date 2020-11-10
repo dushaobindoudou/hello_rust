@@ -32,3 +32,16 @@ impl Routes {
     }
   }
 }
+
+
+pub struct Word<'a> {
+  pub name: &'a str,
+}
+
+impl<'b> Word<'b> {
+  pub fn show(&self) {
+    println!("打印当前的名称：{}", self.name);
+  }
+}
+
+

@@ -2,6 +2,8 @@ mod config;
 
 mod routes;
 
+
+
 fn main() {
     config::pub_fn();
     config::config::pub_fn();
@@ -10,6 +12,10 @@ fn main() {
     let rts = routes::Routes::new(homeRoute);
     let rtsi = routes::Routes::intoNew("this is into new".to_string());
     let rtsic = routes::Routes::cIntoNew("c this is into new".to_string());
+
+    let word = routes::Word{name: "i am the new best"};
+
     println!("Hello, world routes! \n \n {}, \n {}", rts.home, rtsi.home);
     println!("rtsic: {}", rtsi.home);
+    word.show();
 }
