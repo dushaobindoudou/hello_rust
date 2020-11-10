@@ -1,7 +1,14 @@
-pub struct routes {
+pub struct Routes {
   pub home: String,
 }
 
-let home = "/home/";
-pub let login = "/login/";
-pub let user = "/user/";
+pub struct Keys {
+}
+
+impl Keys {
+  pub fn all() -> String {
+    let my = "all in one";
+    my.to_string()
+  }
+}
+
