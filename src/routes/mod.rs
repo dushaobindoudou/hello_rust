@@ -12,3 +12,23 @@ impl Keys {
   }
 }
 
+impl Routes {
+  pub fn new(home: &str) -> Routes {
+    Routes {
+      home: home.to_string(),
+    }
+  }
+
+  pub fn intoNew<T: Into<String>>(into_home: T) -> Routes {
+    Routes {
+      home: into_home.into(),
+    }
+  }
+
+
+  pub fn cIntoNew<T>(c_home:T) -> Routes where T:Into<String> {
+    Routes {
+      home: c_home.into(),
+    }
+  }
+}
