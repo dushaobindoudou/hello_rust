@@ -45,3 +45,8 @@ impl<'b> Word<'b> {
 }
 
 
+pub fn setRoute<T: Into<String> + std::fmt::Display>(route: T) -> Routes {
+  println!("current set route: {}", route);
+  Routes::cIntoNew(route)
+}
+
