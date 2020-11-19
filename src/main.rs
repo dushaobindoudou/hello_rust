@@ -56,9 +56,9 @@ fn main() {
     //     }
     // }
     println!("当前的素数: {}", count as i32);
-    let num = 100;
-    let resNum = cal::t_t_s(num);
-    println!("把数字：{} 转换为7进制: {}", 100, resNum);
+    let num = -405220;
+    let resNum = cal::t_t_s(&num, 7);
+    println!("把数字：{} 转换为7进制: {}", num, resNum);
 
     let rt = routes::setRoute("basic/home");
 
